@@ -1,0 +1,69 @@
+{
+	"scopeName": "source.systemverilog",
+	"patterns": [
+		{
+			"include": "#keyword"
+		}
+	],
+	"repository": {
+		"keyword": {
+			"patterns": [
+				{ "include": "#comment-line" },
+				{ "include": "#comment-block" },
+				{ "include": "#storage-type" },
+				{ "include": "#storage-modifier" },
+				{ "include": "#keyword-control" },
+				{ "include": "#keyword-operator" },
+				{ "include": "#keyword-operator-char" },
+				{ "include": "#variable-others" },
+				{ "include": "#variable" },
+				{ "include": "#string" }
+			]
+		},
+		"comment-line": {
+			"begin": "//",
+			"end": "$",
+			"name": "comment.line"
+		},
+		"comment-block": {
+			"begin": "/\\*",
+			"end": "\\*/",
+			"name": "comment.block"
+		},
+		"storage-modifier": {
+			"match": "\\b(inout|input|output|signed)\\b",
+			"name": "storage.modifier"
+		},
+		"storage-type": {
+			"match": "\\b(logic|wire|reg)\\b",
+			"name": "storage.type"
+		},
+		"string": {
+			"begin": "\"", "end": "\"",
+			"patterns": [{
+				"name": "constant", "match": "\\\\."
+			}],
+			"name": "string"
+		},
+		"keyword-operator": {
+			"match": "(<=|>=|\\+\\+|--|&&|``|\\+=|-=)",
+			"name": "keyword.operator"
+		},
+		"keyword-operator-char": {
+			"match": "[+-><=*/]",
+			"name": "keyword.operator"
+		},
+		"keyword-control": {
+			"match": "\\b(module|endmodule|if|else|always|always_comb|always_ff|always_latch|begin|end)\\b",
+			"name": "keyword.control"
+		},
+		"variable-others": {
+			"match": "`\\w+\\b",
+			"name": "keyword.control"
+		},
+		"variable": {
+			"match": "\\b\\w+\\b",
+			"name": "variable"
+		}
+	}
+}
