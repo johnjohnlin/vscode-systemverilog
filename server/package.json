@@ -1,0 +1,13 @@
+{
+	"name": "vscode-systemverilog-languageserver",
+	"displayName": "vscode-systemverilog-languageserver",
+	"description": "",
+	"version": "0.0.1",
+	"engines": {
+		"vscode": "^1.57.0"
+	},
+	"dependencies": {
+		"vscode-languageserver": "^7.0.0",
+		"vscode-languageserver-textdocument": "^1.0.1"
+	}
+}

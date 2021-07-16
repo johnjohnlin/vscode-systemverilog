@@ -5,6 +5,7 @@
 		"lib": ["ES2019"],
 		"outDir": "out",
 		"rootDir": "src",
+		"composite": true,
 		"sourceMap": true
 	},
 	"include": [
@@ -13,8 +14,5 @@
 	"exclude": [
 		"node_modules",
 		".vscode-test"
-	],
-	"references": [
-		{ "path": "./server"}
 	]
 }
